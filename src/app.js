@@ -1,13 +1,14 @@
 import React from 'react';
-
+import NavBar from "./components/todo/navBar";
 import ToDo from './components/todo/todo.js';
 
-export default class App extends React.Component {
-  render() {
+const App =()=> {
     return (
       <>
+        <NavBar/>
         <ToDo />
       </>
     );
-  }
 }
+
+export default App;
