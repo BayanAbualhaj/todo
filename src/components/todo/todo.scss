@@ -22,12 +22,23 @@ body, html {
 
 }
 
+.list-group {
+    height:40%
+}
+
+.rate {
+    position: relative;
+    bottom: -35px;
+    left: 75%;
+}
+
 .todo {
 
     display:flex;
     flex-direction:row;
     justify-content: flex-start;
     margin: 2em;
+    
 
     form {
 
