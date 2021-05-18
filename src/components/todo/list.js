@@ -14,10 +14,10 @@ const TodoList = (props) => {
             onClose={() => props.handleDelete(item._id)}
           >
             <Toast.Header>
-              <Badge style={{padding:"2%",marginRight:"3%"}} pill variant={item.complete ? "danger" : "success"}>{item.complete ? "Completed" : "Pending..."}</Badge>
+              <Badge onClick={() => props.handleComplete(item._id)} style={{padding:"2%",marginRight:"3%"}} pill variant={item.complete ? "danger" : "success"}>{item.complete ? "Completed" : "Pending..."}</Badge>
               <strong className="mr-auto">{item.assignee}</strong>
             </Toast.Header>
-            <Toast.Body onClick={() => props.handleComplete(item._id)}>
+            <Toast.Body >
               {item.text}
               <div class="rate">difficulty: {item.difficulty}</div>
             </Toast.Body>
