@@ -14,7 +14,7 @@ __________________
 
 ## UML:
 
-![uml](./assets/UML.png)
+![uml](./assets/UML1.png)
 
 ________________
 
