@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ListGroup from "react-bootstrap/ListGroup";
 import Toast from "react-bootstrap/Toast";
 import Badge from "react-bootstrap/Badge";
+import { PaginationContext } from '../context/pagination';
 
 const TodoList = (props) => {
+  const paginationContext = useContext(PaginationContext);
+  
   return (
     <ListGroup>
-      {props.list.map((item) => (
+      {paginationContext.items
+				.slice(paginationContext.offset, paginationContext.offset + 3)
+				.map((item) => (
           <Toast
             action
             className={`toast complete-${item.complete.toString()}`}
